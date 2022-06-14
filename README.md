@@ -26,7 +26,8 @@ pip install yfinance
 
 ## TODO
 
-1. Make terminal output more comprehensible.
+1. Document the code.
+2. Make terminal output more comprehensible.
 
 ## Contributing
 
