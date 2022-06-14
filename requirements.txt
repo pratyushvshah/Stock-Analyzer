@@ -1,5 +1,4 @@
 requests
 yfinance
-re
 sys
 csv
