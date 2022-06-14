@@ -1,4 +1,4 @@
-# Preliminary Stock Analysis
+# Preliminary Stock Analyzer
 
 This python project is aimed at automating the process of analysing a company's financials.
 
