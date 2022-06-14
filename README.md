@@ -1,6 +1,6 @@
 # Preliminary Stock Analyzer
 
-This python project is aimed at automating the process of analysing a company's financials.
+This python project is aimed at automating the process of analyzing a company's financials.
 
 ## Disclaimer
 
@@ -23,7 +23,7 @@ pip install yfinance
 1. Gives a company overview.
 2. Pulls the key financials of the company.
 3. Calculates all the important ratios to understand a company's financials.
-4. Gives an option to save the screen in a `.csv` file.
+4. Gives an option to save the screen in a `companyticker.csv` file.
 
 *The program does not take OTC stocks and most penny stocks.*
 
