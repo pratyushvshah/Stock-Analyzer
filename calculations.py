@@ -1,9 +1,12 @@
 from apirequests import *
 
 
+# Class for getting all the important financial metrics of a company
 class StockDetails:
 
     def __init__(self, company):
+
+        # Assigning the API request results to variables to use for calculations
         self.company = company
         self.overview = getOverview(company)
         self.income = getIncomeStatement(company)
@@ -13,6 +16,7 @@ class StockDetails:
 
     def marginAnalysis(self):
 
+        # Calculating all the Margins and storing it in a dictionary
         def grossMargin(self):
             gm = {}
             for i in (0, 1, 2, 3, 4):
@@ -41,6 +45,7 @@ class StockDetails:
 
     def profitabilityRatios(self):
 
+        # Calculating all the Profitability Ratios and storing it in a dictionary
         def returnOnEquity(self):
             roe = {}
             for i in (0, 1, 2, 3):
@@ -65,6 +70,7 @@ class StockDetails:
 
     def cashFlowRatios(self):
 
+        # Calculating all the Cash Flow Ratios and storing it in a dictionary
         def operatingCashFlowRatio(self):
             cfr = {}
             for i in (0, 1, 2, 3, 4):
@@ -88,6 +94,7 @@ class StockDetails:
 
     def solvencyRatios(self):
 
+        # Calculating all the Solvency Ratios and storing it in a dictionary
         def debtToEquityRatio(self):
             dter = {}
             for i in (0, 1, 2, 3, 4):
@@ -116,6 +123,7 @@ class StockDetails:
 
     def liquidityRatios(self):
 
+        # Calculating all the Liquidity Ratios and storing it in a dictionary
         def currentRatio(self):
             cr = {}
             for i in (0, 1, 2, 3, 4):
@@ -132,6 +140,7 @@ class StockDetails:
 
     def companyOverview(self):
 
+        # Pulling the metrics required for Company Overview and storing it in a dictionary
         def details(self):
             d = {
                     'Name': f'{self.info["longName"]}',
