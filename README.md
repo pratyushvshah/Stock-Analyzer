@@ -36,7 +36,7 @@ If you wish to bypass authentication for testing purposes -
             break
 ```
 4. Save the file and run `main.py`
-5. When prompted for "Username" and "Password", respond with "test" in the terminal window.
+5. When prompted for "Username" and "Password", respond with "test" for both prompts in the terminal window.
 
 ## TODO
 
