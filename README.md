@@ -24,6 +24,20 @@ pip install yfinance
 3. Create a python file in the same folder with the name `filekeys.py` and assign your API key to a variable called `apikey`. Alternatively, just replace all the `{filekeys.apikey}` with your API key in the `apirequests.py` file.
 4. Run `main.py`.
 
+### Optional  
+
+If you wish to bypass authentication for testing purposes -
+
+1. Go to `main.py`
+2. Enter a new line after line 36.
+3. With the correct indentation, type in the following:
+```python
+        elif userID == "test":
+            break
+```
+4. Save the file and run `main.py`
+5. When prompted for "Username" and "Password", respond with "test" in the terminal window.
+
 ## TODO
 
 1. Document the code.
