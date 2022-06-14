@@ -34,20 +34,7 @@ pip install yfinance
  import filekeys
  ```
 4. Run `main.py`.
-
-#### Optional  
-
-If you wish to bypass authentication for testing purposes -
-
-1. Open `main.py`
-2. Enter a new line after line 36.
-3. With the correct indentation, type in the following:
-```python
-        elif userID == "test":
-            break
-```
-4. Save the file and run `main.py`
-5. When prompted for "Username" and "Password", respond with "test" for both prompts in the terminal window.
+5. Save the file and run `main.py`
 
 ## TODO
 
