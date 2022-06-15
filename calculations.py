@@ -370,9 +370,9 @@ class StockDetails:
             self.pricetcf = "n/a"
 
 
+    # Pulling the metrics required for Company Overview and storing it in a dictionary
     def companyOverview(self):
 
-        # Pulling the metrics required for Company Overview and storing it in a dictionary
         def details(self):
             d = {
                     'Name': self.name,
@@ -423,9 +423,9 @@ class StockDetails:
         return {"Company Overview": {"Details": details(self), "Key Financials": keyFinancials(self), "Valuation Multiples": valuationMultiples(self)}}
 
 
+    # Calculating all the Margins and storing it in a dictionary
     def marginAnalysis(self):
 
-        # Calculating all the Margins and storing it in a dictionary
         def grossMargin(self):
             gm = {}
             for i in (0, 1, 2, 3, 4):
@@ -464,9 +464,10 @@ class StockDetails:
 
         return {"Margin Analysis": {"Gross Margin": grossMargin(self), "EBITDA Margin": ebitdaMargin(self), "EBIT Margin": ebitMargin(self), "Net Income Margin": netIncomeMargin(self)}}
 
+    
+    # Calculating all the Profitability Ratios and storing it in a dictionary
     def profitabilityRatios(self):
 
-        # Calculating all the Profitability Ratios and storing it in a dictionary
         def returnOnEquity(self):
             roe = {}
             for i in (0, 1, 2, 3):
@@ -498,9 +499,10 @@ class StockDetails:
 
         return {"Profitability Ratios" : {"Return on Equity": returnOnEquity(self), "Return on Asset": returnOnAsset(self), "Return on Invested Capital": returnOnInvestedCapital(self)}}
 
+    
+    # Calculating all the Cash Flow Ratios and storing it in a dictionary
     def cashFlowRatios(self):
 
-        # Calculating all the Cash Flow Ratios and storing it in a dictionary
         def operatingCashFlowRatio(self):
             cfr = {}
             for i in (0, 1, 2, 3, 4):
@@ -531,9 +533,10 @@ class StockDetails:
 
         return {"Cash Flow Ratios": {"Operating Cash Flow Ratio": operatingCashFlowRatio(self), "Cash Flow Return on Investment": cashFlowReturnOnInvestment(self), "FCF / Total Funded Debt": freeCashFlowToTotalFundedDebt(self)}}
 
+    
+    # Calculating all the Solvency Ratios and storing it in a dictionary
     def solvencyRatios(self):
 
-        # Calculating all the Solvency Ratios and storing it in a dictionary
         def debtToEquityRatio(self):
             dter = {}
             for i in (0, 1, 2, 3, 4):
@@ -572,9 +575,10 @@ class StockDetails:
 
         return {"Solvency Ratios": {"Debt to Equity Ratio": debtToEquityRatio(self), "Debt to Capital Ratio": debtToCapitalRatio(self), "Debt to Asset Ratio": debtToAssetRatio(self), "Interest Coverage Ratio": interestCoverageRatio(self)}}
 
+
+    # Calculating all the Liquidity Ratios and storing it in a dictionary
     def liquidityRatios(self):
 
-        # Calculating all the Liquidity Ratios and storing it in a dictionary
         def currentRatio(self):
             cr = {}
             for i in (0, 1, 2, 3, 4):
