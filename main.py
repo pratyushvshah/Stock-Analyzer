@@ -26,9 +26,9 @@ def main():
         ss = input("Do you wish to save this screen? (Y/N) ").lower().strip()
         if ss == 'y':
             saveScreen(company, co, ma, pr, cfr, sr, lr)
-            sys.exit("Thank you for using the screen")
+            sys.exit("Thank you for using the screen!")
         elif ss == 'n':
-            sys.exit("Thank you for using the screen")
+            sys.exit("Thank you for using the screen!")
         else:
             print("Invalid input")
             continue
