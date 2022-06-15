@@ -13,6 +13,7 @@ class StockDetails:
         self.balance = getBalanceSheet(company)
         self.cash = getCashFlow(company)
         self.info = getInfo(company)
+
         # Gets gross profit for last 5 years
         self.grossprofit = []
         for i in (0, 1, 2, 3, 4):
@@ -21,6 +22,7 @@ class StockDetails:
                 self.grossprofit.append(gp)
             except:
                 self.grossprofit.append(0)
+
         # Gets revenue for last 5 years
         self.revenue = []
         for i in (0, 1, 2, 3, 4):
@@ -29,6 +31,7 @@ class StockDetails:
                 self.revenue.append(r)
             except:
                 self.revenue.append(0)
+
         # Gets ebitda for last 5 years
         self.ebitda = []
         for i in (0, 1, 2, 3, 4):
@@ -37,6 +40,7 @@ class StockDetails:
                 self.ebitda.append(ebitda)
             except:
                 self.ebitda.append(0)
+
         # Gets ebit for last 5 years
         self.ebit = []
         for i in (0, 1, 2, 3, 4):
@@ -45,6 +49,7 @@ class StockDetails:
                 self.ebit.append(ebit)
             except:
                 self.ebit.append(0)
+
         # Gets net income for last 5 years
         self.netincome = []
         for i in (0, 1, 2, 3, 4):
@@ -53,6 +58,7 @@ class StockDetails:
                 self.netincome.append(ni)
             except:
                 self.netincome.append(0)
+
         # Gets income tax expense for last 5 years
         self.incometax = []
         for i in (0, 1, 2, 3, 4):
@@ -61,6 +67,7 @@ class StockDetails:
                 self.incometax.append(it)
             except:
                 self.incometax.append(0)
+
         # Gets interest expense for last 5 years
         self.interestexpense = []
         for i in (0, 1, 2, 3, 4):
@@ -69,6 +76,7 @@ class StockDetails:
                 self.interestexpense.append(ie)
             except:
                 self.interestexpense.append(0)
+
         # Gets current assets for last 5 years
         self.currentasset = []
         for i in (0, 1, 2, 3, 4):
@@ -77,6 +85,7 @@ class StockDetails:
                 self.currentasset.append(ca)
             except:
                 self.currentasset.append(0)
+
         # Gets current liabilities for last 5 years
         self.currentliability = []
         for i in (0, 1, 2, 3, 4):
@@ -85,6 +94,7 @@ class StockDetails:
                 self.currentliability.append(cl)
             except:
                 self.currentliability.append(0)
+                
         # Gets non current assets for last 5 years
         self.noncurrentasset = []
         for i in (0, 1, 2, 3, 4):
@@ -93,6 +103,7 @@ class StockDetails:
                 self.noncurrentasset.append(nca)
             except:
                 self.noncurrentasset.append(0)
+
         # Gets non current libility for last 5 years
         self.noncurrentliability = []
         for i in (0, 1, 2, 3, 4):
@@ -101,6 +112,7 @@ class StockDetails:
                 self.noncurrentliability.append(ncl)
             except:
                 self.noncurrentliability.append(0)
+
         # Gets shareholers equity for last 5 years
         self.shareholdersequity = []
         for i in (0, 1, 2, 3, 4):
@@ -109,6 +121,7 @@ class StockDetails:
                 self.shareholdersequity.append(se)
             except:
                 self.shareholdersequity.append(0)
+
         # Gets total assets for last 5 years
         self.totalassets = []
         for i in (0, 1, 2, 3, 4):
@@ -117,6 +130,7 @@ class StockDetails:
                 self.totalassets.append(ta)
             except:
                 self.totalassets.append(0)
+
         # Gets total liabilities for last 5 years
         self.totalliabilities = []
         for i in (0, 1, 2, 3, 4):
@@ -125,6 +139,7 @@ class StockDetails:
                 self.totalliabilities.append(tl)
             except:
                 self.totalliabilities.append(0)
+
         # Gets inventory for last 5 years
         self.inventory = []
         for i in (0, 1, 2, 3, 4):
@@ -133,6 +148,7 @@ class StockDetails:
                 self.inventory.append(inv)
             except:
                 self.inventory.append(0)
+
         # Gets cash and cash equivalents for last 5 years
         self.cash1 = []
         for i in (0, 1, 2, 3, 4):
@@ -141,6 +157,7 @@ class StockDetails:
                 self.cash1.append(c)
             except:
                 self.cash1.append(0)
+
         # Gets operating cash for last 5 years
         self.operatingcash = []
         for i in (0, 1, 2, 3, 4):
@@ -149,6 +166,7 @@ class StockDetails:
                 self.operatingcash.append(oc)
             except:
                 self.operatingcash.append(0)
+
         # Gets capital expenditure for last 5 years
         self.capitalexpenditure = []
         for i in (0, 1, 2, 3, 4):
@@ -157,6 +175,7 @@ class StockDetails:
                 self.capitalexpenditure.append(ce)
             except:
                 self.capitalexpenditure.append(0)
+
         # Gets short term debt for last 5 years
         self.shorttermdebt = []
         for i in (0, 1, 2, 3, 4):
@@ -165,6 +184,7 @@ class StockDetails:
                 self.shorttermdebt.append(std)
             except:
                 self.shorttermdebt.append(0)
+
         # Gets long term debt for last 5 years
         self.longtermdebt = []
         for i in (0, 1, 2, 3, 4):
@@ -174,118 +194,176 @@ class StockDetails:
             except:
                 self.longtermdebt.append(0)
         self.currentyear = int(self.income["annualReports"][0]["fiscalDateEnding"].split("-")[0])
+
+        # Gets name of company
         try:
             self.name = f'{self.info["longName"]}'
         except:
             self.name = "n/a"
+        
+        # Gets ticker
         try:
             self.ticker = f'{self.info["symbol"]}'
         except:
             self.ticker = "n/a"
+        
+        # Gets country 
         try:
             self.country = f'{self.info["country"]}'
         except:
             self.country = "n/a"
+        
+        # Gets sector
         try:
             self.sector = f'{self.info["sector"]}'
         except:
             self.sector = "n/a"
+        
+        # Gets industry
         try:
             self.industry = f'{self.info["industry"]}'
         except:
             self.industry = "n/a"
+        
+        # Gets 52 week high price
         try:
             self.highprice = f'{int(self.info["fiftyTwoWeekHigh"]):.2f}'
         except:
             self.highprice = "n/a"
+        
+        # Gets current price
         try:
             self.price = f'{int(self.info["currentPrice"]):.2f}'
         except:
             self.price = "n/a"
+        
+        # Gets 52 week low price
         try:
             self.lowprice = f'{int(self.info["fiftyTwoWeekLow"]):.2f}'
         except:
             self.lowprice = "n/a"
+        
+        # Gets analyst recommendation
         try:
             self.rec = f'{self.info["recommendationKey"].title()}'
         except:
             self.rec = "n/a"
+        
+        # Gets target price
         try:
             self.target = f'{int(self.info["targetMedianPrice"]):.2f}'
         except:
             self.target = "n/a"
+        
+        # Gets market cap
         try:
             self.market = f'{int(self.info["marketCap"]):,}'
         except:
             self.market = "n/a"
+        
+        # Gets enterprise value
         try:
             self.enterprise = f'{int(self.info["enterpriseValue"]):,}'
         except:
             self.enterprise = "n/a"
+        
+        # Gets revenue
         try:
             self.rev = f'{int(self.info["totalRevenue"]):,}'
         except:
             self.rev = "n/a"
+        
+        # Gets total debt
         try:
             self.debt = f'{int(self.info["totalDebt"]):,}'
         except:
             self.debt = "n/a"
+        
+        # Gets total cash
         try:
             self.cash2 = f'{int(self.info["totalCash"]):,}'
         except:
             self.casg2 = "n/a"
+        
+        # Gets gross profit
         try:
             self.grossprof = f'{int(self.info["grossProfits"]):,}'
         except:
             self.grossprof = "n/a"
+        
+        # Gets ebitda
         try:
             self.ebitda1 = f'{int(self.info["ebitda"]):,}'
         except:
             self.ebitda1 = "n/a"
+        
+        # Gets net income
         try:
             self.ni = f'{int(self.info["netIncomeToCommon"]):,}'
         except:
             self.ni = "n/a"
+        
+        # Gets free cash flow
         try:
             self.fcf = f'{int(self.info["freeCashflow"]):,}'
         except:
             self.fcf = "n/a"
+        
+        # Gets shares outstanding
         try:
             self.shares = f'{int(self.info["sharesOutstanding"]):,}'
         except:
             self.shares = "n/a"
+        
+        # Gets dividend rate
         try:
             self.div = f'{int(self.info["dividendRate"])}%'
         except:
             self.div = "n/a"
+        
+        # Gets trailing pe
         try:
             self.trailpe = f'{int(self.info["trailingPE"]):.2f}x'
         except:
             self.trailpe = "n/a"
+        
+        # Gets forward pe
         try:
             self.fowpe = f'{int(self.info["forwardPE"]):.2f}x'
         except:
             self.fowpe = "n/a"
+        
+        # Gets price to sales
         try:
             self.pts12 = f'{int(self.info["priceToSalesTrailing12Months"]):.2f}x'
         except:
             self.pts12 = "n/a"
+        
+        # Gets price to book
         try:
             self.ptb = f'{int(self.info["priceToBook"]):.2f}x'
         except:
             self.ptb = "n/a"
+        
+        # Gets enterprise to revenue
         try:
             self.evr = f'{int(self.info["enterpriseToRevenue"]):.2f}x'
         except:
             self.evr = "n/a"
+        
+        # Gets ev to ebitda
         try:
             self.evebitda = f'{int(self.info["enterpriseToEbitda"]):.2f}x'
         except:
             self.evebitda = "n/a"
+        
+        # Gets ev to ebit
         try:
             self.evebit = f'{self.enterprise / self.ebit[0]:.2f}x'
         except:
             self.evebit = "n/a"
+        
+        # Gets price to cash flow
         try:
             self.pricetcf = f'{self.price / (self.operatingcash[0] / self.shares):.2f}x'
         except: 
