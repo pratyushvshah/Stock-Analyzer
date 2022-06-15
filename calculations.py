@@ -335,33 +335,33 @@ class StockDetails:
         
         # Gets price to sales
         try:
-            self.pts12 = f'{int(self.info["priceToSalesTrailing12Months"]):.2f}x'
+            self.pricetosales = f'{int(self.info["priceToSalesTrailing12Months"]):.2f}x'
         except:
-            self.pts12 = "n/a"
+            self.pricetosales = "n/a"
         
         # Gets price to book
         try:
-            self.ptb = f'{int(self.info["priceToBook"]):.2f}x'
+            self.pricetobook = f'{int(self.info["priceToBook"]):.2f}x'
         except:
-            self.ptb = "n/a"
+            self.pricetobook = "n/a"
         
         # Gets enterprise to revenue
         try:
-            self.evr = f'{int(self.info["enterpriseToRevenue"]):.2f}x'
+            self.enttorev = f'{int(self.info["enterpriseToRevenue"]):.2f}x'
         except:
-            self.evr = "n/a"
+            self.enttorev = "n/a"
         
         # Gets ev to ebitda
         try:
-            self.evebitda = f'{int(self.info["enterpriseToEbitda"]):.2f}x'
+            self.evtoebitda = f'{int(self.info["enterpriseToEbitda"]):.2f}x'
         except:
-            self.evebitda = "n/a"
+            self.evtoebitda = "n/a"
         
         # Gets ev to ebit
         try:
-            self.evebit = f'{self.enterprise / self.ebit[0]:.2f}x'
+            self.evtoebit = f'{self.enterprise / self.ebit[0]:.2f}x'
         except:
-            self.evebit = "n/a"
+            self.evtoebit = "n/a"
         
         # Gets price to cash flow
         try:
@@ -411,11 +411,11 @@ class StockDetails:
                     'Trailing PE': self.trailpe,
                     'Forward PE': self.fowpe,
                     'Price to Cash Flow': self.pricetcf,
-                    'Price to Sales': self.pts12,
-                    'Price to Book': self.ptb,
-                    'EV / Revenue': self.evr,
-                    'EV / EBITDA': self.evebitda,
-                    'EV / EBIT': self.evebit
+                    'Price to Sales': self.pricetosales,
+                    'Price to Book': self.pricetobook,
+                    'EV / Revenue': self.enttorev,
+                    'EV / EBITDA': self.evtoebitda,
+                    'EV / EBIT': self.evtoebit
                 }
                 
             return vm
