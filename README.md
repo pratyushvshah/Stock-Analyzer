@@ -41,7 +41,7 @@ pip install yfinance
 
 ## Demo
 
-https://user-images.githubusercontent.com/89347300/173900098-78ea0d0c-39ed-40d7-acfa-3e65bd089430.mp4
+https://user-images.githubusercontent.com/89347300/173996558-b5599984-4f82-4e33-8ff8-df1ed3ea6dfc.mp4
 
 ## Contributing
 
