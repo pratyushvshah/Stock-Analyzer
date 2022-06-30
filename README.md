@@ -10,12 +10,12 @@ This program is intended to be used and must be used for information and educati
 
 ## Requirements
 
-Go to `requirements.txt` to install all the modules required to run `main.py`.
+Go to `requirements.txt` to see all the modules required to run `main.py`.
 
-For example, run this in your terminal and replace `yfinance` with each item in `requirements.txt` -
+Run the following command in your terminal to install all the required modules - 
 
 ```bash
-pip install yfinance
+pip install -r requirements.txt
 ```
 
 ## Features
